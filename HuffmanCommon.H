@@ -2,6 +2,9 @@
 #define __HUFFMANCOMMON_H__
 
 #include <memory>
+#include <string>
+#include <iostream>
+#include <map>
 
 
 struct Node{
@@ -14,5 +17,12 @@ struct Node{
 
     bool isLeaf(){return (!left && !right);}
 };
+
+
+void printHisto(const std::map<char,int> & histogram){
+	for (auto it = histogram.begin();it != histogram.end();it++){
+		std::cout << it->first << ":" << it->second << std::endl;
+	}
+}
 
 #endif

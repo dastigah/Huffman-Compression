@@ -3,7 +3,9 @@
 
 
 int Compress::generateHistogram(const std::string & content,std::map<char,int> & histogram){
-	//TODO
+	for (auto letter : content){
+		histogram[letter]++;
+	}
 	return histogram.size();
 }
 
